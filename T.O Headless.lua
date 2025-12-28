@@ -1,4 +1,3 @@
--- edited by haxel :)
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
@@ -11,10 +10,17 @@ headTilt.Disabled = true
 local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 
 local head = character:WaitForChild("Head")
-head.CanCollide = false
 head.CanTouch = false
 head.CanQuery = false
-head.MassLess = true
+head.Massless = true
+
+task.spawn(function()
+	while true do
+		head.CanCollide = false
+		task.wait(0.0025)
+	end
+end)
+
 local torso = character:WaitForChild("Torso")
 local neck = torso:WaitForChild("Neck")
 
