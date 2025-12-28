@@ -14,7 +14,7 @@ local head = character:WaitForChild("Head")
 head.CanCollide = false
 head.CanTouch = false
 head.CanQuery = false
-head.massless = true
+head.MassLess = true
 local torso = character:WaitForChild("Torso")
 local neck = torso:WaitForChild("Neck")
 
